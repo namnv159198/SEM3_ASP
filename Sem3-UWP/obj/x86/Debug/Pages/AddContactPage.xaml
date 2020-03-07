@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Sem3_UWP.Pages.AddContactPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sem3_UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <Button Content="Search Contact" Margin="60"></Button>
+        <TextBlock TextAlignment="Center" FontSize="30">Add Contact</TextBlock>
+        <Grid RowSpacing="30" Margin="40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0">Name</TextBlock>
+            <TextBox x:ConnectionId='4' Grid.Column="1" Grid.Row="0" x:Name="TxtName"></TextBox>
+            <TextBlock x:ConnectionId='5' Grid.Row="0" Grid.Column="2" x:Name="NotifyTxtName"></TextBlock>
+
+            <TextBlock Grid.Row="1" Grid.Column="0">Phone Number</TextBlock>
+            <TextBox x:ConnectionId='6' Grid.Column="1" Grid.Row="1" x:Name="TxtPhone"></TextBox>
+            <TextBlock x:ConnectionId='7' Grid.Row="1" Grid.Column="2" x:Name="NotifyTxtPhone"></TextBlock>
+        </Grid>
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock x:ConnectionId='2' x:Name="StatusAdd" TextAlignment="Center"></TextBlock>
+            <Button x:ConnectionId='3' Content="Add Contact"                          ></Button>
+        </StackPanel>
+
+    </StackPanel>
+</Page>
+

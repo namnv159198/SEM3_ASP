@@ -1,0 +1,104 @@
+﻿<Page
+    x:Class="Sem3_UWP.Pages.Main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sem3_UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <SplitView x:Name="splitView" PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"
+                   IsPaneOpen="False" OpenPaneLength="256" CompactPaneLength="48" DisplayMode="CompactOverlay">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+               
+                    <TextBlock Text="MENU" x:Name="PaneHeader" Margin="60,12,0,0" Style="{StaticResource BaseTextBlockStyle}"></TextBlock>
+                    
+                    <StackPanel   Margin="3,60,0,0">
+                        <Button Width="auto" x:Name="Button_Back"  VerticalAlignment="Top" Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" Click="Button_Click">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                    <SymbolIcon Symbol="Back"  />
+                                    </StackPanel>
+                                </Button.Content>
+                           </Button>
+                        <Button Margin="0,20,0,0"  Width="auto"   VerticalAlignment="Top" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" Click="Button_Menu">
+                           
+                        </Button>
+
+                        <Button Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"  Click="Button_Home" Margin="0,40,0,0">
+                            <Button.Content>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                                <SymbolIcon Symbol="Home" />
+                                <TextBlock Text="Home" Margin="24,0,0,0" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            </Button.Content>
+                    </Button>
+
+                        <Button Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"  Click="Button_Profile" Margin="0,40,0,0">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                                <SymbolIcon Symbol="ContactInfo" />
+                                <TextBlock Text="Your Profile" Margin="24,0,0,0" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            </Button.Content>
+                    </Button>
+
+                        <Button Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" Click="Button_Add_Music" Margin="0,40,0,0">
+                        <Button.Content>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                                    <SymbolIcon Symbol="Add" />
+                                    <TextBlock Text="Post Music" Margin="24,0,0,0" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                    </Button>
+
+                        <Button Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" Click="Button_Music" Margin="0,40,0,0">
+                            <Button.Content >
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                                    <SymbolIcon Symbol="Play" />
+                                    <TextBlock Text="Music" Margin="24,0,0,0"  VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" Click="Button_Your_Music" Margin="0,40,0,0">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                                    <SymbolIcon Symbol="MusicInfo" />
+                                    <TextBlock Text="Your Music" Margin="24,0,0,0" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="14,24,0,24" >
+                        <SymbolIcon Symbol="Setting" />
+                        <TextBlock Text="Settings" Margin="24,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+            <ScrollViewer>
+                
+                    <Frame x:Name="ContentView" Padding="12,0,12,24" IsTabStop="True"
+                />
+               
+            </ScrollViewer>
+            </SplitView.Content>
+            <!--  <SplitView.Content> -->
+           <!--      <Frame x:Name="ContentView"></Frame> -->
+           <!-- </SplitView.Content> -->
+        </SplitView>
+        
+       
+    </Grid>
+</Page>

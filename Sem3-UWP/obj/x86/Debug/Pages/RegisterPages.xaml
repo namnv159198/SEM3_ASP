@@ -1,0 +1,95 @@
+﻿<Page
+    x:Class="Sem3_UWP.Pages.RegisterPages"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sem3_UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer>
+        <StackPanel>
+            <StackPanel Margin="20,30,0,0">
+                <Button x:ConnectionId='26'                          >
+                    <Button.Content >
+                        <StackPanel Orientation="Horizontal" >
+                            <SymbolIcon Symbol="Back"  />
+                            <TextBlock FontSize = "20"> &#160; &#160; Login</TextBlock>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+            <TextBlock TextAlignment="Center" FontSize="20" Margin="30">Register</TextBlock>
+            <Grid Margin="80,20,50,0" RowSpacing="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0">First Name</TextBlock>
+                <TextBox x:ConnectionId='6'  Grid.Row="0" Grid.Column="1" x:Name="TxtFirstName"></TextBox>
+                <TextBlock x:ConnectionId='7' Grid.Row="0" Grid.Column="2" x:Name="StatusFirstName"></TextBlock>
+
+                <TextBlock Grid.Row="1" Grid.Column="0"  >Last Name</TextBlock>
+                <TextBox x:ConnectionId='8'  Grid.Row="1" Grid.Column="1" x:Name="TxtLastName"  ></TextBox>
+                <TextBlock x:ConnectionId='9' Grid.Row="1" Grid.Column="2" x:Name="StatusLastName"  ></TextBlock>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" >Password</TextBlock>
+                <PasswordBox x:ConnectionId='10'  Grid.Row="2" Grid.Column="1" x:Name="TxtPassword"  ></PasswordBox>
+                <TextBlock x:ConnectionId='11' Grid.Row="2" Grid.Column="2" x:Name="StatusPassword"  ></TextBlock>
+
+                <TextBlock Grid.Row="4" Grid.Column="0"  Grid.RowSpan="2">Address</TextBlock>
+                <TextBox x:ConnectionId='12'  Grid.Row="4" Grid.Column="1" x:Name="TxtAddress"  ></TextBox>
+                <TextBlock x:ConnectionId='13' Grid.Row="4" Grid.Column="2" x:Name="StatusAddress"  ></TextBlock>
+
+                <TextBlock Grid.Row="5" Grid.Column="0"  Grid.RowSpan="2">Phone</TextBlock>
+                <TextBox x:ConnectionId='14'  Grid.Row="5" Grid.Column="1" x:Name="TxtPhone"  ></TextBox>
+                <TextBlock x:ConnectionId='15' Grid.Row="5" Grid.Column="2" x:Name="StatusPhone" ></TextBlock>
+
+                <TextBlock Grid.Row="6" Grid.Column="0" Grid.RowSpan="3"> Avatar</TextBlock>
+                <Button x:ConnectionId='16' Grid.Row="6" Grid.Column="1" Content="Show My Cam" VerticalAlignment="Top" Height="32" Width="109"                      />
+
+                <Image x:ConnectionId='17' Grid.Row="7" Grid.Column="1" x:Name="ImageControl"  Width="200" Height="200"/>
+
+                <TextBlock Grid.Row="8" Grid.Column="0"  >Link Avatar</TextBlock>
+                <TextBox x:ConnectionId='18'  Grid.Row="8" Grid.Column="1" x:Name="TxtAvatar"  ></TextBox>
+                <TextBlock x:ConnectionId='19' Grid.Row="8" Grid.Column="2" x:Name="StatusAvatar" ></TextBlock>
+
+                <TextBlock Grid.Row="9" Grid.Column="0"  Grid.RowSpan="2">Gender</TextBlock>
+                <StackPanel Grid.Row="9" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"  >
+                    <RadioButton x:ConnectionId='24' IsChecked="True"                          Tag="Male" >Male</RadioButton>
+                    <RadioButton x:ConnectionId='25' Tag="Female"                        >Female</RadioButton>
+                </StackPanel>
+
+                <TextBlock Grid.Row="10" Grid.Column="0" Margin="0,22,0,-22" >Email</TextBlock>
+                <TextBox x:ConnectionId='20'  Grid.Row="10" Grid.Column="1" x:Name="TxtEmail"  ></TextBox>
+                <TextBlock x:ConnectionId='21' Grid.Row="10" Grid.Column="2" x:Name="StatusEmail"  ></TextBlock>
+
+                <TextBlock Grid.Row="11" Grid.Column="0" >Birthday</TextBlock>
+                <TextBox x:ConnectionId='22'  Grid.Row="11" Grid.Column="1" x:Name="TxtBirthday" ></TextBox>
+                <TextBlock x:ConnectionId='23' Grid.Row="11" Grid.Column="2" x:Name="StatusBirthday" ></TextBlock>
+            </Grid>
+            <TextBlock x:ConnectionId='2' x:Name="StatusCreateSuccess" TextAlignment="Center" Margin="0,5,0,0" FontSize="25" Foreground="Green"></TextBlock>
+            <TextBlock x:ConnectionId='3' x:Name="StatusCreateFailes" TextAlignment="Center" Margin="0,5,0,0"  FontSize="25" Foreground="Red"></TextBlock>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,0,0,0">
+                <Button x:ConnectionId='4' Margin="5"  Height="40" FontSize="20"                      >Submit</Button>
+                <Button x:ConnectionId='5' Margin="10"  Height="40" FontSize="20"                       >Reset</Button>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

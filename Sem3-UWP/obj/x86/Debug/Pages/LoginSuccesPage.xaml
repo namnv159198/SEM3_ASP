@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="Sem3_UWP.Pages.LoginSuccesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sem3_UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <!-- <StackPanel HorizontalAlignment="Right" Margin="60"> -->
+        <!--     <Button Content="Logout" Click="Button_Click"></Button> -->
+        <!-- </StackPanel> -->
+        <!-- -->
+        <TextBlock TextAlignment="Center" FontSize="30" Margin="0,0,0,0" Foreground="Green">LOGIN SUCCESS !</TextBlock>
+
+        <Grid Margin="70,80,0,0" RowSpacing="40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="7*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" FontSize="20">User ID 
+                &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;: </TextBlock>
+            <TextBlock x:ConnectionId='2' Grid.Row="0" Grid.Column="1" x:Name="TxtUserID" FontSize="18" Foreground="DarkTurquoise"></TextBlock>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" FontSize="20">Email  &#160; &#160;:</TextBlock>
+            <TextBlock x:ConnectionId='3' Grid.Row="1" Grid.Column="1" x:Name="TxtEmail" FontSize="18" Foreground="DarkTurquoise"></TextBlock>
+
+
+            <TextBlock Grid.Row="2" Grid.Column="0" FontSize="20">Create At  &#160; &#160; :</TextBlock>
+            <TextBlock x:ConnectionId='4' Grid.Row="2" Grid.Column="1" x:Name="TxtcreatedAt" FontSize="18" Foreground="DarkTurquoise"></TextBlock>
+        </Grid>
+    </StackPanel>
+</Page>
+
